@@ -1,0 +1,60 @@
+package tugasKu;
+
+/**
+*
+* @author iNu
+*/
+public class paket implements harga {
+private String nmPengirim;
+private String tujuanPaket;
+private int beratPaket;
+private int biayaPerKg;
+private double bayar;
+
+public paket(){
+
+}
+public String getNmPengirim(){
+return nmPengirim;
+}
+public void setNmPengirim(String temp){
+nmPengirim=temp;
+}
+public String getTujuanPaket(){
+return tujuanPaket;
+}
+public void setTujuanPaket(String temp){
+tujuanPaket=temp;
+}
+public int getBeratPaket(){
+return beratPaket;
+}
+public void setBeratPaket(int temp){
+beratPaket=temp;
+}
+public double biayaPerKg(){
+if(tujuanPaket.equalsIgnoreCase(“Balikpapan”)){
+biayaPerKg=10000;
+return biayaPerKg;
+
+}
+else if(tujuanPaket.equalsIgnoreCase(“Surabaya”)){
+biayaPerKg=15000;
+return biayaPerKg;
+}
+else if (tujuanPaket.equalsIgnoreCase(“Jakarta”)){
+biayaPerKg=20000;
+return biayaPerKg;
+
+}
+else
+{biayaPerKg=25000;
+return biayaPerKg;
+
+}
+}
+public  double Bayar(){
+bayar=beratPaket*biayaPerKg;
+return bayar;
+}
+}
